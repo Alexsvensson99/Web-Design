@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Din Supermarket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+        .navbar {
+            position: fixed;
+            width: 100%;
+            padding: 20px 0;
+            z-index: 999;
+            transition: background-color 0.5s ease, box-shadow 0.3s ease;
+        }
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            transition: color 0.3s ease;
+        }
+        .navbar-transparent {
+            background-color: transparent;
+            box-shadow: none;
+        }
+        .navbar-solid {
+            background-color: #3ca370;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .nav-link {
+            color: white;
+            font-size: 1.1rem;
+            margin-right: 20px;
+            position: relative;
+        }
+        .nav-link:hover {
+            color: #ffde59;
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: #ffde59;
+            transition: width 0.3s ease;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .hero-section {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('supermarket.jpg') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .hero-section p {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+        .btn-custom {
+            background-color: #ff9f43;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        .btn-custom:hover {
+            background-color: #ff6b01;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-transparent">
+        <div class="container">
+            <a class="navbar-brand" href="#">Supermarket</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#sortiment">Hem</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#erbjudanden">Erbjudanden</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nyheter">Nyheter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div>
+            <h1>Välkommen till Din Supermarket</h1>
+            <p>Upptäck vårt breda utbud – alltid färskt, alltid prisvärt.</p>
+            <a href="#sortiment" class="btn btn-custom">Se vårt sortiment</a>
+        </div>
+    </header>
+
+    <!-- Sortiment Section -->
+    <section id="sortiment" class="text-center py-5">
+        <div class="container">
+            <h2 class="section-heading">Våra Produkter</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="offer-card shadow">
+                        <img src="fruit.jpg" alt="Frukt och Grönt" class="w-100 rounded">
+                        <div class="p-3">
+                            <h5>Frukt och Grönt</h5>
+                            <p>Färska frukter och grönsaker varje dag.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="offer-card shadow">
+                        <img src="dairy.jpg" alt="Mejeriprodukter" class="w-100 rounded">
+                        <div class="p-3">
+                            <h5>Mejeriprodukter</h5>
+                            <p>Mjölk, yoghurt och ost av högsta kvalitet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="offer-card shadow">
+                        <img src="bread.jpg" alt="Bageri" class="w-100 rounded">
+                        <div class="p-3">
+                            <h5>Bageri</h5>
+                            <p>Nygräddat bröd varje morgon.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Erbjudanden Section -->
+    <section id="erbjudanden" class="bg-light text-center py-5">
+        <div class="container">
+            <h2 class="section-heading">Veckans Erbjudanden</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="offer-card shadow">
+                        <img src="special-offer.jpg" alt="Erbjudande 1" class="w-100 rounded">
+                        <div class="p-3">
+                            <h5>50% rabatt på frukt!</h5>
+                            <p>Den här veckan har vi halva priset på våra färska frukter.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="offer-card shadow">
+                        <img src="special-offer2.jpg" alt="Erbjudande 2" class="w-100 rounded">
+                        <div class="p-3">
+                            <h5>Färskost för 19 SEK</h5>
+                            <p>Köp 2 för 30 SEK – erbjudande gäller fram till söndag.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nyheter Section -->
+    <section id="nyheter" class="text-center py-5">
+        <div class="container">
+            <h2 class="section-heading">Nyheter & Event</h2>
+            <p>Håll dig uppdaterad med våra senaste nyheter och event!</p>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="news-card shadow">
+                        <img src="event1.jpg" alt="Event 1" class="w-100 rounded">
+                        <div class="p-3">
+                            <h5>Grillfest denna fredag!</h5>
+                            <p>Kom och njut av gratis smakprover.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="news-card shadow">
+                        <img src="event2.jpg" alt="Event 2" class="w-100 rounded">
+                        <div class="p-3">
+                            <h5>Höstens nya produkter</h5>
+                            <p>Upptäck våra ekologiska nyheter.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt Section -->
+    <section id="kontakt" class="bg-light text-center py-5">
+        <div class="container">
+            <h2 class="section-heading">Kontakta Oss</h2>
+            <form>
+                <div class="row g-3">
+                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Ditt namn"></div>
+                    <div class="col-md-6"><input type="email" class="form-control" placeholder="Din e-post"></div>
+                </div>
+                <div class="my-3"><textarea class="form-control" rows="5" placeholder="Ditt meddelande"></textarea></div>
+                <button type="submit" class="btn btn-custom">Skicka Meddelande</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Supermarket. Följ oss på <a href="#">Instagram</a> och <a href="#">Facebook</a>.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Change navbar style on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.remove('navbar-transparent');
+                navbar.classList.add('navbar-solid');
+            } else {
+                navbar.classList.remove('navbar-solid');
+                navbar.classList.add('navbar-transparent');
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
