@@ -1,0 +1,236 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light {
+    background-color: #f4f8fb;
+    color: #333;
+}
+
+body.dark {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ff9800;
+}
+
+.egg-card,
+.result-card {
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .egg-card,
+body.dark .result-card {
+    background-color: #2d2d2d;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.theme-toggle {
+    border: 2px solid #ff9800;
+    border-radius: 20px;
+    padding: 8px 18px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    background-color: transparent;
+    color: #ff9800;
+    float: right;
+    transition: all 0.3s ease;
+}
+
+body.light .theme-toggle {
+    background-color: #ff9800;
+    color: white;
+}
+
+.theme-toggle:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="radio"] {
+    margin-bottom: 5px;
+}
+
+select,
+button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #e5e5e5;
+    font-size: 1rem;
+}
+
+button.calculate-btn {
+    background-color: #ff9800;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button.calculate-btn:hover {
+    background-color: #e67e00;
+    transform: scale(1.05);
+}
+
+.result {
+    margin-top: 30px;
+}
+
+.result-card h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.result-card p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.theme-toggle {
+    position: fixed; /* Sticks to the top-right corner */
+    top: 15px; /* Space from the top */
+    right: 15px; /* Space from the right */
+    width: auto; /* Auto width based on content */
+    height: 40px; /* Fixed height for consistency */
+    padding: 5px 12px; /* Smaller padding for a compact look */
+    border: none; /* No border for simplicity */
+    border-radius: 20px; /* Rounded corners for a pill-like button */
+    background-color: #ff9800; /* Orange background */
+    color: white; /* White icon and text */
+    cursor: pointer; /* Pointer for hover */
+    display: flex; /* Flexbox for horizontal alignment */
+    align-items: center; /* Vertically center content */
+    gap: 8px; /* Space between emoji and text */
+    z-index: 10; /* Ensure it's above everything else */
+    font-size: 1rem; /* Adjust font size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a subtle floating effect */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+body.light .theme-toggle {
+    background-color: #333; /* Dark background for light mode */
+    color: white;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1); /* Slight grow effect on hover */
+    background-color: #e67e00; /* Darker orange when hovered */
+}
+.timer-display {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.start-btn,
+.reset-btn {
+    width: auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 10px 5px;
+}
+
+.start-btn {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+}
+
+.reset-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+}
+
+.start-btn:hover {
+    background-color: #e67e00;
+}
+
+.reset-btn:hover {
+    background-color: #444;
+}
+
+.tips-section {
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #2d2d2d;
+    color: white;
+}
+/* Pro Tips Section for Light and Dark Mode */
+.tips-section {
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #2d2d2d; /* Dark mode background */
+    color: white; /* White text for dark mode */
+}
+
+body.light .tips-section {
+    background-color: #f0f0f0; /* Light grey background for light mode */
+    color: #333; /* Dark text for light mode */
+    border: 1px solid #ddd; /* Optional border for contrast */
+}

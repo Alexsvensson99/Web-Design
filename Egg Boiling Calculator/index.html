@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Egg Boiling Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="dark">
+    <div class="container">
+        <div class="header">
+            <h1>🥚 Perfect Egg Boiling Calculator 🕒</h1>
+            <button id="theme-toggle" class="theme-toggle">🌞 Light Mode</button>
+        </div>
+
+        <div class="egg-card">
+            <form id="egg-form">
+                <div class="form-group">
+                    <label for="egg-size">Select Egg Size:</label>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="small" name="egg-size" value="small">
+                            <label for="small">Small (S)</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="medium" name="egg-size" value="medium" checked>
+                            <label for="medium">Medium (M)</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="large" name="egg-size" value="large">
+                            <label for="large">Large (L)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="egg-temp">Initial Temperature:</label>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="room" name="egg-temp" value="room" checked>
+                            <label for="room">Room Temp (20°C)</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="fridge" name="egg-temp" value="fridge">
+                            <label for="fridge">Fridge (5°C)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="egg-doneness">Desired Doneness:</label>
+                    <select id="egg-doneness">
+                        <option value="soft">Soft-Boiled (Runny)</option>
+                        <option value="medium">Medium-Boiled (Custardy)</option>
+                        <option value="hard">Hard-Boiled (Firm)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="calculate-btn">Calculate Time ⏱️</button>
+            </form>
+
+            <div id="timer-section" class="hidden">
+                <p id="boiling-time" class="boiling-instructions"></p>
+                <h2>Boiling Timer:</h2>
+                <div class="timer-display">
+                    <span id="minutes">00</span>:<span id="seconds">00</span>
+                </div>
+                <button id="start-timer-btn" class="start-btn">Start Timer</button>
+                <button id="reset-btn" class="reset-btn hidden">Reset</button>
+            </div>
+        </div>
+
+        <div id="tips-section" class="tips-section">
+            <h3>Pro Tips:</h3>
+            <ul>
+                <li>Use room temperature eggs for more even cooking.</li>
+                <li>Cool eggs in ice water after boiling for an easier peel.</li>
+                <li>Don’t overcrowd the pot for consistent boiling.</li>
+            </ul>
+        </div>
+
+        <audio id="timer-sound" src="https://cdn.freesound.org/previews/536/536421_4921277-lq.mp3"></audio>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
